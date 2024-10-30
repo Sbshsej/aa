@@ -1,0 +1,903 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+          <meta charset="UTF-8">
+          <meta name="viewport" content="width=device-width, initial-scale=1.0">
+          <title>Document</title>
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+          <style>@import url("https://fonts.googleapis.com/css2?family=Baloo+2&display=swap");
+                    $main-green: #79dd09 !default;
+                    $main-green-rgb-015: rgba(121, 221, 9, 0.1) !default;
+                    $main-yellow: #bdbb49 !default;
+                    $main-yellow-rgb-015: rgba(189, 187, 73, 0.1) !default;
+                    $main-red: #bd150b !default;
+                    $main-red-rgb-015: rgba(189, 21, 11, 0.1) !default;
+                    $main-blue: #0076bd !default;
+                    $main-blue-rgb-015: rgba(0, 118, 189, 0.1) !default;
+                    
+                    /* This pen */
+                    body {
+  font-family: "Baloo 2", cursive; /* Keeps your font */
+  font-size: 16px; /* Font size for the body */
+  color: #ffffff; /* Text color for the body */
+  text-rendering: optimizeLegibility; /* Optimizes text rendering */
+  font-weight: initial; /* Initial font weight */
+  background-color: #18151f; /* Background color for the contact form area */
+  padding: 15px; /* Padding for the contact form area */
+  border-radius: 10px; /* Rounded corners for the contact form area */
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background: linear-gradient(135deg, #6a11cb 0%, #9e2ad3 100%);
+    color: #ece2e2;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    height: 80px;
+    opacity: 1.25;
+}
+
+.navbar .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+}
+
+.navbar .logo i {
+    margin-right: 0.5rem;
+    color: #ffde59;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+}
+
+.nav-links li {
+    position: relative;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #ffffffcc;
+    font-size: 1rem;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    transition: color 0.3s ease;
+}
+
+.nav-links a i {
+    margin-right: 0.5rem;
+    color: #ffde59;
+    transition: transform 0.3s;
+}
+
+.nav-links a:hover {
+    color: #ffffff;
+}
+
+.nav-links a:hover i {
+    transform: rotate(15deg);
+}
+
+.nav-links a::before {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #ffde59;
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+
+.nav-links a:hover::before {
+    transform: scaleX(1);
+}
+
+                   /******** default stuff *************/
+*{
+	box-sizing: border-box;
+}
+body{
+	margin: 0;
+	padding: 0;
+	text-align: center;
+}
+.page1{
+	width: 100%;
+	height:50vh;
+
+}
+.page2{
+	width: 100%;
+	height:50vh;
+}
+
+
+/****************************** setting semi trans background when scrolled *******************/
+
+.page1{
+	background: url("https://lh3.googleusercontent.com/Hst38SvCa5xtgws2_HPtjq7agdSJJ7I1_-HRDMdKfYos0t0665whMMfm4rWUKGAXtw0JxygZi-7BcAgluOrYPoa0A7IZYLJZkI1CqIl1oEPIWUAasiMkqrmoiV7qr85UGoRTTG91s9p38Lux0zmm8G5CXsSpzRR4GrOw3yhOcvC4rr3447X5RHRPKDszTxYBQBmkSUSENcWb7kluZN53HINlzNlQUy4PhaagcV5f6DRJG2TIcJzruS5RcXM22MZFXeK79vtUSTnY9S5FWz1j0Yrql9RKAiCs9lCLMl3fx6S8nRk7u_LOLWZZBVFuVsRqYVy_xngy5zLZ9FtTl2bkAa5T46RoyUU4A4LWlvRLHrZiow-fapsr2A6YJyvTKNpCvAGusSdrX27RlnanfS0BjRCu_7dzmHnExTfX6cSu_MJmmemObMVbN3qeGQb1x9v2PXV3UEsjw9SMzzb5ETm_Qh8Aso3Em0vXOwVKY7cq-GOjX20wGk6x8ml2grmBmKGMACzIaha8yjL6_IRJ2fZDZy7gkuuLGNnJswHo7USRzS3ifbCTHIGBKGNdPvOn6h79g6GA8YyWAqi0xzs_eCtfHuyf0UvD2ue6tjBJ5t69j-lxGvtQMsrqvMAGf6-QhfvnHrwUd5TCYRPB4SOIKmZZps9tXPp6Oh95lWnxjkjC=w1014-h662-no") no-repeat center center;     /*responsive bckgrnd img */
+	background-size: cover;
+	background-attachment: fixed;    
+              /* parallex effect 1*/
+}
+
+.page2{
+	background-color: rgb(87, 4, 93);
+	opacity: 0.75;
+	
+}
+.page2wrapper{
+	background: url("https://lh3.googleusercontent.com/Hst38SvCa5xtgws2_HPtjq7agdSJJ7I1_-HRDMdKfYos0t0665whMMfm4rWUKGAXtw0JxygZi-7BcAgluOrYPoa0A7IZYLJZkI1CqIl1oEPIWUAasiMkqrmoiV7qr85UGoRTTG91s9p38Lux0zmm8G5CXsSpzRR4GrOw3yhOcvC4rr3447X5RHRPKDszTxYBQBmkSUSENcWb7kluZN53HINlzNlQUy4PhaagcV5f6DRJG2TIcJzruS5RcXM22MZFXeK79vtUSTnY9S5FWz1j0Yrql9RKAiCs9lCLMl3fx6S8nRk7u_LOLWZZBVFuVsRqYVy_xngy5zLZ9FtTl2bkAa5T46RoyUU4A4LWlvRLHrZiow-fapsr2A6YJyvTKNpCvAGusSdrX27RlnanfS0BjRCu_7dzmHnExTfX6cSu_MJmmemObMVbN3qeGQb1x9v2PXV3UEsjw9SMzzb5ETm_Qh8Aso3Em0vXOwVKY7cq-GOjX20wGk6x8ml2grmBmKGMACzIaha8yjL6_IRJ2fZDZy7gkuuLGNnJswHo7USRzS3ifbCTHIGBKGNdPvOn6h79g6GA8YyWAqi0xzs_eCtfHuyf0UvD2ue6tjBJ5t69j-lxGvtQMsrqvMAGf6-QhfvnHrwUd5TCYRPB4SOIKmZZps9tXPp6Oh95lWnxjkjC=w1014-h662-no") no-repeat center center;
+	background-attachment:local;
+	background-size:cover;
+}
+.content{
+	color: white;
+	padding:12%;
+}
+ 
+                    .dark {
+                              background: #110f16;
+                    }
+                    
+                    
+                    .light {
+                              background: #f3f5f7;
+                    }
+                    
+                    a, a:hover {
+                              text-decoration: none;
+                              transition: color 0.3s ease-in-out;
+                    }
+                    
+                    #pageHeaderTitle {
+                              margin: 2rem 0;
+                              text-transform: uppercase;
+                              text-align: center;
+                              font-size: 2.5rem;
+                    }
+                    
+                    /* Cards */
+                    .postcard {
+                      flex-wrap: wrap;
+                      display: flex;
+                      
+                      box-shadow: 0 4px 21px -12px rgba(0, 0, 0, 0.66);
+                      border-radius: 10px;
+                      margin: 0 0 2rem 0;
+                      overflow: hidden;
+                      position: relative;
+                      color: #ffffff;
+                    
+                              &.dark {
+                                        background-color: #18151f;
+                              }
+                              &.light {
+                                        background-color: #e1e5ea;
+                              }
+                              
+                              .t-dark {
+                                        color: #18151f;
+                              }
+                              
+                      a {
+                        color: inherit;
+                      }
+                              
+                              h1,	.h1 {
+                                        margin-bottom: 0.5rem;
+                                        font-weight: 500;
+                                        line-height: 1.2;
+                              }
+                              
+                              .small {
+                                        font-size: 80%;
+                              }
+                    
+                      .postcard__title {
+                        font-size: 1.75rem;
+                      }
+                    
+                      .postcard__img {
+                        max-height: 180px;
+                        width: 100%;
+                        object-fit: cover;
+                        position: relative;
+                      }
+                    
+                      .postcard__img_link {
+                        display: contents;
+                      }
+                    
+                      .postcard__bar {
+                        width: 50px;
+                        height: 10px;
+                        margin: 10px 0;
+                        border-radius: 5px;
+                        background-color: #424242;
+                        transition: width 0.2s ease;
+                      }
+                    
+                      .postcard__text {
+                        padding: 1.5rem;
+                        position: relative;
+                        display: flex;
+                        flex-direction: column;
+                      }
+                    
+                      .postcard__preview-txt {
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                        text-align: justify;
+                        height: 100%;
+                      }
+                    
+                      .postcard__tagbox {
+                        display: flex;
+                        flex-flow: row wrap;
+                        font-size: 14px;
+                        margin: 20px 0 0 0;
+                                        padding: 0;
+                        justify-content: center;
+                    
+                        .tag__item {
+                          display: inline-block;
+                          background: rgba(83, 83, 83, 0.4);
+                          border-radius: 3px;
+                          padding: 2.5px 10px;
+                          margin: 0 5px 5px 0;
+                          cursor: default;
+                          user-select: none;
+                          transition: background-color 0.3s;
+                    
+                          &:hover {
+                            background: rgba(83, 83, 83, 0.8);
+                          }
+                        }
+                      }
+                    
+                      &:before {
+                        content: "";
+                        position: absolute;
+                        top: 0;
+                        right: 0;
+                        bottom: 0;
+                        left: 0;
+                        background-image: linear-gradient(-70deg, #424242, transparent 50%);
+                        opacity: 1;
+                        border-radius: 10px;
+                      }
+                    
+                      &:hover .postcard__bar {
+                        width: 100px;
+                      }
+                    }
+                    
+                    @media screen and (min-width: 769px) {
+                      .postcard {
+                        flex-wrap: inherit;
+                    
+                        .postcard__title {
+                          font-size: 2rem;
+                        }
+                    
+                        .postcard__tagbox {
+                          justify-content: start;
+                        }
+                    
+                        .postcard__img {
+                          max-width: 300px;
+                          max-height: 100%;
+                          transition: transform 0.3s ease;
+                        }
+                    
+                        .postcard__text {
+                          padding: 3rem;
+                          width: 100%;
+                        }
+                    
+                        .media.postcard__text:before {
+                          content: "";
+                          position: absolute;
+                          display: block;
+                          background: #18151f;
+                          top: -20%;
+                          height: 130%;
+                          width: 55px;
+                        }
+                    
+                        &:hover .postcard__img {
+                          transform: scale(1.1);
+                        }
+                    
+                        &:nth-child(2n+1) {
+                          flex-direction: row;
+                        }
+                    
+                        &:nth-child(2n+0) {
+                          flex-direction: row-reverse;
+                        }
+                    
+                        &:nth-child(2n+1) .postcard__text::before {
+                          left: -12px !important;
+                          transform: rotate(4deg);
+                        }
+                    
+                        &:nth-child(2n+0) .postcard__text::before {
+                          right: -12px !important;
+                          transform: rotate(-4deg);
+                        }
+                      }
+                    }
+                    @media screen and (min-width: 1024px){
+                                        .postcard__text {
+                          padding: 2rem 3.5rem;
+                        }
+                                        
+                                        .postcard__text:before {
+                          content: "";
+                          position: absolute;
+                          display: block;
+                          
+                          top: -20%;
+                          height: 130%;
+                          width: 55px;
+                        }
+                              
+                      .postcard.dark {
+                                        .postcard__text:before {
+                                                  background: #18151f;
+                                        }
+                      }
+                              .postcard.light {
+                                        .postcard__text:before {
+                                                  background: #e1e5ea;
+                                        }
+                      }
+                    }
+                    
+                    /* COLORS */
+                    .postcard .postcard__tagbox .green.play:hover {
+                              background: $main-green;
+                              color: black;
+                    }
+                    .green .postcard__title:hover {
+                              color: $main-green;
+                    }
+                    .green .postcard__bar {
+                              background-color: $main-green;
+                    }
+                    .green::before {
+                              background-image: linear-gradient(
+                                        -30deg,
+                                        $main-green-rgb-015,
+                                        transparent 50%
+                              );
+                    }
+                    .green:nth-child(2n)::before {
+                              background-image: linear-gradient(30deg, $main-green-rgb-015, transparent 50%);
+                    }
+                    
+                    .postcard .postcard__tagbox .blue.play:hover {
+                              background: $main-blue;
+                    }
+                    .blue .postcard__title:hover {
+                              color: $main-blue;
+                    }
+                    .blue .postcard__bar {
+                              background-color: $main-blue;
+                    }
+                    .blue::before {
+                              background-image: linear-gradient(-30deg, $main-blue-rgb-015, transparent 50%);
+                    }
+                    .blue:nth-child(2n)::before {
+                              background-image: linear-gradient(30deg, $main-blue-rgb-015, transparent 50%);
+                    }
+                    
+                    .postcard .postcard__tagbox .red.play:hover {
+                              background: $main-red;
+                    }
+                    .red .postcard__title:hover {
+                              color: $main-red;
+                    }
+                    .red .postcard__bar {
+                              background-color: $main-red;
+                    }
+                    .red::before {
+                              background-image: linear-gradient(-30deg, $main-red-rgb-015, transparent 50%);
+                    }
+                    .red:nth-child(2n)::before {
+                              background-image: linear-gradient(30deg, $main-red-rgb-015, transparent 50%);
+                    }
+                    
+                    .postcard .postcard__tagbox .yellow.play:hover {
+                              background: $main-yellow;
+                              color: black;
+                    }
+                    .yellow .postcard__title:hover {
+                              color: $main-yellow;
+                    }
+                    .yellow .postcard__bar {
+                              background-color: $main-yellow;
+                    }
+                    .yellow::before {
+                              background-image: linear-gradient(
+                                        -30deg,
+                                        $main-yellow-rgb-015,
+                                        transparent 50%
+                              );
+                    }
+                    .yellow:nth-child(2n)::before {
+                              background-image: linear-gradient(
+                                        30deg,
+                                        $main-yellow-rgb-015,
+                                        transparent 50%
+                              );
+                    }
+                    
+                    @media screen and (min-width: 769px) {
+                              .green::before {
+                                        background-image: linear-gradient(
+                                                  -80deg,
+                                                  $main-green-rgb-015,
+                                                  transparent 50%
+                                        );
+                              }
+                              .green:nth-child(2n)::before {
+                                        background-image: linear-gradient(
+                                                  80deg,
+                                                  $main-green-rgb-015,
+                                                  transparent 50%
+                                        );
+                              }
+                    
+                              .blue::before {
+                                        background-image: linear-gradient(
+                                                  -80deg,
+                                                  $main-blue-rgb-015,
+                                                  transparent 50%
+                                        );
+                              }
+                              .blue:nth-child(2n)::before {
+                                        background-image: linear-gradient(80deg, $main-blue-rgb-015, transparent 50%);
+                              }
+                    
+                              .red::before {
+                                        background-image: linear-gradient(-80deg, $main-red-rgb-015, transparent 50%);
+                              }
+                              .red:nth-child(2n)::before {
+                                        background-image: linear-gradient(80deg, $main-red-rgb-015, transparent 50%);
+                              }
+                              
+                              .yellow::before {
+                                        background-image: linear-gradient(
+                                                  -80deg,
+                                                  $main-yellow-rgb-015,
+                                                  transparent 50%
+                                        );
+                              }
+                              .yellow:nth-child(2n)::before {
+                                        background-image: linear-gradient(
+                                                  80deg,
+                                                  $main-yellow-rgb-015,
+                                                  transparent 50%
+                                        );
+                              }
+                    }
+                    .contact-container {
+  background-color: #18151f; /* Dark background */
+  text-align: center;
+  display: flex;
+  gap: 20px;
+  padding: 60px;
+  
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  margin: 40px auto; 
+  max-width: 800px; /* Set a max-width to control the size */
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  width: 50%; /* Adjusts to take full width of the container */
+}
+
+.contact-form h2 {
+  margin-bottom: 10px;
+  color: #f6f3f3;
+}
+
+.contact-form label {
+  margin-top: 10px;
+  color: #e6e3e3;
+}
+
+.contact-form input,
+.contact-form select,
+.contact-form textarea {
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #920a0a;
+  border-radius: 4px;
+  width: 100%;
+  
+}
+
+.contact-form button {
+  margin-top: 15px;
+  padding: 10px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.contact-form button:hover {
+  background-color: #0056b3;
+}
+
+.owner-image {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.owner-image img {
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 20px; 
+  padding: 70px;
+  /* Adds space between the image and social icons */
+}
+
+.social-links {
+  display: flex;
+  gap: 15px; /* Space between icons */
+}
+
+.social-icon {
+  font-size: 24px;
+  color: #333;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.social-icon:hover {
+  color: #0077b5; /* Adjust hover color */
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+                    </style>
+
+</head>
+<body>
+  <nav class="navbar">
+    <div class="logo">
+        <i class="fas fa-gem"></i> The Rebbit's House
+    </div>
+    <ul class="nav-links">
+        <li><a href="/"><i class="fas fa-home"></i> Home</a></li>
+        <li><a href="#contactForm"><i class="fas fa-info-circle"></i> About</a></li>
+        <li><a href="#pageHeaderTitle"><i class="fas fa-box"></i> Products</a></li>
+        <li><a href="#"><i class="fas fa-phone"></i> Contact</a></li>
+        <li><a href="#"><i class="fas fa-user"></i> Profile</a></li>
+    </ul>
+</nav>
+
+  <div class="page1">
+	</div>
+	<div class="page2wrapper">
+		<div class="page2">
+			<div class="content">
+				<h1>Making things look great</h1>
+				<h2>For companies who do great stuff</h2>
+			</div>
+		</div>	
+	</div>
+          <section class="dark">
+                    <div class="container py-4">
+                              <h1 class="h1 text-center" id="pageHeaderTitle">My Cards Dark</h1>
+          
+                              <article class="postcard dark blue">
+                                        <a class="postcard__img_link" href="#">
+                                                  <img class="postcard__img" src="https://picsum.photos/1000/1000" alt="Image Title" />
+                                        </a>
+                                        <div class="postcard__text">
+                                                  <h1 class="postcard__title blue"><a href="#"> My First Website</a></h1>
+                                                  <div class="postcard__subtitle small">
+                                                            <time datetime="2024-10-15 12:00:00">
+                                                                      <i class="fas fa-calendar-alt mr-2"></i>Mon, Oct 14th 2024
+                                                            </time>
+                                                  </div>
+                                                  <div class="postcard__bar"></div>
+                                                  <div class="postcard__preview-txt">Explore a world of exclusive products and effortless shopping. Our app is designed to give you a seamless and enjoyable shopping experience, powered by the latest tech.
+                                                            Built with a reliable backend using React Node.js and MongoDB, ensuring that your data is safe and shopping is smooth.
+                                                            Sign up or log in to start your shopping journey with us today!
+                                                            
+                                                            
+                                                            
+                                                            
+                                                            
+                                                            
+                                                            
+                                                  </div>
+                                                  <ul class="postcard__tagbox">
+                                                            <li class="tag__item"><i class="fas fa-tag mr-2"></i>dynamic</li>
+                                                            <li class="tag__item"><i class="fas fa-clock mr-2"></i>natures first</li>
+                                                            <li class="tag__item play blue">
+                                                                      <a href="#"><i class="fas fa-play mr-2"></i>Explore video</a>
+                                                            </li>
+                                                  </ul>
+                                        </div>
+                              </article>
+                              <article class="postcard dark red">
+                                        <a class="postcard__img_link" href="#">
+                                                  <img class="postcard__img" src="https://picsum.photos/501/500" alt="Image Title" />	
+                                        </a>
+                                        <div class="postcard__text">
+                                                  <h1 class="postcard__title red"><a href="#">A Fun World of Nursery Rhymes!</a></h1>
+                                                  <div class="postcard__subtitle small">
+                                                            <time datetime="2024-10-05 12:00:00">
+                                                                      <i class="fas fa-calendar-alt mr-2"></i>Mon, May 05th 2024
+                                                            </time>
+                                                  </div>
+                                                  <div class="postcard__bar"></div>
+                                                  <div class="postcard__preview-txt">Delight your little ones with a collection of classic nursery rhymes designed for interactive learning and fun! Built with React, this app brings timeless songs to life with:
+
+                                                            Beautiful Illustrations: Colorful visuals to engage young minds.
+                                                            Easy Navigation: Simple, kid-friendly interface for effortless browsing.
+                                                            Learning Through Play: Promotes language, rhythm, and memory development in a fun way.
+                                                            Sing, play, and learn together with [App Name]! Perfect for parents, teachers, and little learners alike.
+                                                            
+                                                            
+                                                            
+                                                            
+                                                            
+                                                            
+                                                            </div>
+                                                  <ul class="postcard__tagbox">
+                                                            <li class="tag__item"><i class="fas fa-tag mr-2"></i>Podcast</li>
+                                                            <li class="tag__item"><i class="fas fa-clock mr-2"></i>55 mins.</li>
+                                                            <li class="tag__item play red">
+                                                                      <a href="#"><i class="fas fa-play mr-2"></i>Play Episode</a>
+                                                            </li>
+                                                  </ul>
+                                        </div>
+                              </article>
+                              <article class="postcard dark green">
+                                        <a class="postcard__img_link" href="#">
+                                                  <img class="postcard__img" src="https://picsum.photos/500/501" alt="Image Title" />
+                                        </a>
+                                        <div class="postcard__text">
+                                                  <h1 class="postcard__title green"><a href="#">Podcast Title</a></h1>
+                                                  <div class="postcard__subtitle small">
+                                                            <time datetime="2020-05-25 12:00:00">
+                                                                      <i class="fas fa-calendar-alt mr-2"></i>Mon, May 25th 2020
+                                                            </time>
+                                                  </div>
+                                                  <div class="postcard__bar"></div>
+                                                  <div class="postcard__preview-txt">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi, fugiat asperiores inventore beatae accusamus odit minima enim, commodi quia, doloribus eius! Ducimus nemo accusantium maiores velit corrupti tempora reiciendis molestiae repellat vero. Eveniet ipsam adipisci illo iusto quibusdam, sunt neque nulla unde ipsum dolores nobis enim quidem excepturi, illum quos!</div>
+                                                  <ul class="postcard__tagbox">
+                                                            <li class="tag__item"><i class="fas fa-tag mr-2"></i>Podcast</li>
+                                                            <li class="tag__item"><i class="fas fa-clock mr-2"></i>55 mins.</li>
+                                                            <li class="tag__item play green">
+                                                                      <a href="#"><i class="fas fa-play mr-2"></i>Play Episode</a>
+                                                            </li>
+                                                  </ul>
+                                        </div>
+                              </article>
+                              <article class="postcard dark yellow">
+                                        <a class="postcard__img_link" href="#">
+                                                  <img class="postcard__img" src="https://picsum.photos/501/501" alt="Image Title" />
+                                        </a>
+                                        <div class="postcard__text">
+                                                  <h1 class="postcard__title yellow"><a href="#">Podcast Title</a></h1>
+                                                  <div class="postcard__subtitle small">
+                                                            <time datetime="2020-05-25 12:00:00">
+                                                                      <i class="fas fa-calendar-alt mr-2"></i>Mon, May 25th 2020
+                                                            </time>
+                                                  </div>
+                                                  <div class="postcard__bar"></div>
+                                                  <div class="postcard__preview-txt">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi, fugiat asperiores inventore beatae accusamus odit minima enim, commodi quia, doloribus eius! Ducimus nemo accusantium maiores velit corrupti tempora reiciendis molestiae repellat vero. Eveniet ipsam adipisci illo iusto quibusdam, sunt neque nulla unde ipsum dolores nobis enim quidem excepturi, illum quos!</div>
+                                                  <ul class="postcard__tagbox">
+                                                            <li class="tag__item"><i class="fas fa-tag mr-2"></i>Podcast</li>
+                                                            <li class="tag__item"><i class="fas fa-clock mr-2"></i>55 mins.</li>
+                                                            <li class="tag__item play yellow">
+                                                                      <a href="#"><i class="fas fa-play mr-2"></i>Play Episode</a>
+                                                            </li>
+                                                  </ul>
+                                        </div>
+                              </article>
+                    </div>
+          </section>
+          
+          <section class="light">
+                    <div class="container py-2">
+                              <div class="h1 text-center text-dark" id="pageHeaderTitle">My Cards Light</div>
+          
+                              <article class="postcard light blue">
+                                        <a class="postcard__img_link" href="#">
+                                                  <img class="postcard__img" src="https://picsum.photos/1000/1000" alt="Image Title" />
+                                        </a>
+                                        <div class="postcard__text t-dark">
+                                                  <h1 class="postcard__title blue"><a href="#">Podcast Title</a></h1>
+                                                  <div class="postcard__subtitle small">
+                                                            <time datetime="2020-05-25 12:00:00">
+                                                                      <i class="fas fa-calendar-alt mr-2"></i>Mon, May 25th 2020
+                                                            </time>
+                                                  </div>
+                                                  <div class="postcard__bar"></div>
+                                                  <div class="postcard__preview-txt">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi, fugiat asperiores inventore beatae accusamus odit minima enim, commodi quia, doloribus eius! Ducimus nemo accusantium maiores velit corrupti tempora reiciendis molestiae repellat vero. Eveniet ipsam adipisci illo iusto quibusdam, sunt neque nulla unde ipsum dolores nobis enim quidem excepturi, illum quos!</div>
+                                                  <ul class="postcard__tagbox">
+                                                            <li class="tag__item"><i class="fas fa-tag mr-2"></i>Podcast</li>
+                                                            <li class="tag__item"><i class="fas fa-clock mr-2"></i>55 mins.</li>
+                                                            <li class="tag__item play blue">
+                                                                      <a href="#"><i class="fas fa-play mr-2"></i>Play Episode</a>
+                                                            </li>
+                                                  </ul>
+                                        </div>
+                              </article>
+                              <article class="postcard light red">
+                                        <a class="postcard__img_link" href="#">
+                                                  <img class="postcard__img" src="https://picsum.photos/501/500" alt="Image Title" />	
+                                        </a>
+                                        <div class="postcard__text t-dark">
+                                                  <h1 class="postcard__title red"><a href="#">Podcast Title</a></h1>
+                                                  <div class="postcard__subtitle small">
+                                                            <time datetime="2020-05-25 12:00:00">
+                                                                      <i class="fas fa-calendar-alt mr-2"></i>Mon, May 25th 2020
+                                                            </time>
+                                                  </div>
+                                                  <div class="postcard__bar"></div>
+                                                  <div class="postcard__preview-txt">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi, fugiat asperiores inventore beatae accusamus odit minima enim, commodi quia, doloribus eius! Ducimus nemo accusantium maiores velit corrupti tempora reiciendis molestiae repellat vero. Eveniet ipsam adipisci illo iusto quibusdam, sunt neque nulla unde ipsum dolores nobis enim quidem excepturi, illum quos!</div>
+                                                  <ul class="postcard__tagbox">
+                                                            <li class="tag__item"><i class="fas fa-tag mr-2"></i>Podcast</li>
+                                                            <li class="tag__item"><i class="fas fa-clock mr-2"></i>55 mins.</li>
+                                                            <li class="tag__item play red">
+                                                                      <a href="#"><i class="fas fa-play mr-2"></i>Play Episode</a>
+                                                            </li>
+                                                  </ul>
+                                        </div>
+                              </article>
+                              <article class="postcard light green">
+                                        <a class="postcard__img_link" href="#">
+                                                  <img class="postcard__img" src="https://picsum.photos/500/501" alt="Image Title" />
+                                        </a>
+                                        <div class="postcard__text t-dark">
+                                                  <h1 class="postcard__title green"><a href="#">Podcast Title</a></h1>
+                                                  <div class="postcard__subtitle small">
+                                                            <time datetime="2020-05-25 12:00:00">
+                                                                      <i class="fas fa-calendar-alt mr-2"></i>Mon, May 25th 2020
+                                                            </time>
+                                                  </div>
+                                                  <div class="postcard__bar"></div>
+                                                  <div class="postcard__preview-txt">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi, fugiat asperiores inventore beatae accusamus odit minima enim, commodi quia, doloribus eius! Ducimus nemo accusantium maiores velit corrupti tempora reiciendis molestiae repellat vero. Eveniet ipsam adipisci illo iusto quibusdam, sunt neque nulla unde ipsum dolores nobis enim quidem excepturi, illum quos!</div>
+                                                  <ul class="postcard__tagbox">
+                                                            <li class="tag__item"><i class="fas fa-tag mr-2"></i>Podcast</li>
+                                                            <li class="tag__item"><i class="fas fa-clock mr-2"></i>55 mins.</li>
+                                                            <li class="tag__item play green">
+                                                                      <a href="#"><i class="fas fa-play mr-2"></i>Play Episode</a>
+                                                            </li>
+                                                  </ul>
+                                        </div>
+                              </article>
+                              <article class="postcard light yellow">
+                                        <a class="postcard__img_link" href="#">
+                                                  <img class="postcard__img" src="https://picsum.photos/501/501" alt="Image Title" />
+                                        </a>
+                                        <div class="postcard__text t-dark">
+                                                  <h1 class="postcard__title yellow"><a href="#">Podcast Title</a></h1>
+                                                  <div class="postcard__subtitle small">
+                                                            <time datetime="2020-05-25 12:00:00">
+                                                                      <i class="fas fa-calendar-alt mr-2"></i>Mon, May 25th 2020
+                                                            </time>
+                                                  </div>
+                                                  <div class="postcard__bar"></div>
+                                                  <div class="postcard__preview-txt">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi, fugiat asperiores inventore beatae accusamus odit minima enim, commodi quia, doloribus eius! Ducimus nemo accusantium maiores velit corrupti tempora reiciendis molestiae repellat vero. Eveniet ipsam adipisci illo iusto quibusdam, sunt neque nulla unde ipsum dolores nobis enim quidem excepturi, illum quos!</div>
+                                                  <ul class="postcard__tagbox">
+                                                            <li class="tag__item"><i class="fas fa-tag mr-2"></i>Podcast</li>
+                                                            <li class="tag__item"><i class="fas fa-clock mr-2"></i>55 mins.</li>
+                                                            <li class="tag__item play yellow">
+                                                                      <a href="#"><i class="fas fa-play mr-2"></i>Play Episode</a>
+                                                            </li>
+                                                  </ul>
+                                        </div>
+                              </article>
+                    </div>
+          </section>
+          <div class="contact-container">
+            <form id="contactForm" class="contact-form" > <!-- Added id="contactForm" -->
+              <h2>Contact Us</h2>
+          
+              <label for="email">Email:</label>
+              <input type="email" id="email" name="email" placeholder="Your email" required>
+          
+              <label for="inquiry">What is this about?</label>
+              <select id="inquiry" name="inquiry">
+                <option value="sales">Sales Inquiry</option>
+                <option value="collaboration">Collaboration</option>
+                <option value="query">Any Query</option>
+              </select>
+          
+              <label for="message">Your Message:</label>
+              <textarea id="message" name="message" rows="4" placeholder="Type your message here" required></textarea>
+          
+              <button type="submit">Send</button>
+            </form>
+          
+            <div class="owner-image">
+              <img src="minions.jpeg" alt="Owner's Image">
+              <div class="social-links">
+                <a href="https://www.instagram.com/deepakk__05/profilecard/?igsh=b2tzcjFmM3NvYnpj" target="_blank" class="social-icon" aria-label="Instagram">
+                  <i class="fab fa-instagram"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/deepakk-makwana-78584b25b?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" class="social-icon" aria-label="LinkedIn">
+                  <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="#" class="social-icon" aria-label="Email">
+                  <i class="fas fa-envelope"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+          <script>
+            document.getElementById('contactForm').addEventListener('submit', async (event) => {
+              event.preventDefault();
+          
+              const formData = {
+                email: document.getElementById('email').value,
+                inquiry: document.getElementById('inquiry').value,
+                message: document.getElementById('message').value,
+              };
+          
+              try {
+                const response = await fetch('http://localhost:3002/submit', {
+  method: 'POST',
+  headers: { 'Content-Type': 'application/json' },
+  body: JSON.stringify(formData),
+});
+          
+                if (response.ok) {
+                  alert('Your message was sent successfully!');
+                  document.getElementById('contactForm').reset();
+                } else {
+                  const errorData = await response.json(); // Get error details from the response
+                  alert(`Error: ${errorData.error || 'There was an issue submitting your message.'}`);
+                }
+              } catch (error) {
+                console.error('Error:', error); // Log the error for debugging
+                alert('An error occurred. Please try again later.');
+              }
+            });
+          </script>
+
+
+                                    
+</body>
+</html>
