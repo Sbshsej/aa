@@ -453,82 +453,27 @@ body{
                               );
                     }
                     
-                    @media screen and (min-width: 769px) {
-                              .green::before {
-                                        background-image: linear-gradient(
-                                                  -80deg,
-                                                  $main-green-rgb-015,
-                                                  transparent 50%
-                                        );
-                              }
-                              .green:nth-child(2n)::before {
-                                        background-image: linear-gradient(
-                                                  80deg,
-                                                  $main-green-rgb-015,
-                                                  transparent 50%
-                                        );
-                              }
-                    
-                              .blue::before {
-                                        background-image: linear-gradient(
-                                                  -80deg,
-                                                  $main-blue-rgb-015,
-                                                  transparent 50%
-                                        );
-                              }
-                              .blue:nth-child(2n)::before {
-                                        background-image: linear-gradient(80deg, $main-blue-rgb-015, transparent 50%);
-                              }
-                    
-                              .red::before {
-                                        background-image: linear-gradient(-80deg, $main-red-rgb-015, transparent 50%);
-                              }
-                              .red:nth-child(2n)::before {
-                                        background-image: linear-gradient(80deg, $main-red-rgb-015, transparent 50%);
-                              }
-                              
-                              .yellow::before {
-                                        background-image: linear-gradient(
-                                                  -80deg,
-                                                  $main-yellow-rgb-015,
-                                                  transparent 50%
-                                        );
-                              }
-                              .yellow:nth-child(2n)::before {
-                                        background-image: linear-gradient(
-                                                  80deg,
-                                                  $main-yellow-rgb-015,
-                                                  transparent 50%
-                                        );
-                              }
-                    }
-                    .contact-container {
-  background-color: #18151f; /* Dark background */
-  text-align: center;
+            .contact-container {
+  background-color: #18151f;
   display: flex;
+  flex-direction: column;
+  align-items: center;
   gap: 20px;
   padding: 60px;
-  
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  margin: 40px auto; 
-  max-width: 800px; /* Set a max-width to control the size */
+  margin: 40px auto;
+  max-width: 800px;
 }
 
 .contact-form {
   display: flex;
   flex-direction: column;
-  width: 50%; /* Adjusts to take full width of the container */
+  width: 100%;
 }
 
 .contact-form h2 {
-  margin-bottom: 10px;
   color: #f6f3f3;
-}
-
-.contact-form label {
-  margin-top: 10px;
-  color: #e6e3e3;
 }
 
 .contact-form input,
@@ -539,59 +484,84 @@ body{
   border: 1px solid #920a0a;
   border-radius: 4px;
   width: 100%;
-  
 }
 
 .contact-form button {
-  margin-top: 15px;
   padding: 10px;
   background-color: #007bff;
   color: #fff;
   border: none;
   border-radius: 4px;
-  cursor: pointer;
-  transition: background-color 0.3s;
-}
-
-.contact-form button:hover {
-  background-color: #0056b3;
-}
-
-.owner-image {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
 }
 
 .owner-image img {
-  width: 250px;
-  height: 250px;
+  width: 100px;
+  height: 100px;
   border-radius: 50%;
-  object-fit: cover;
-  margin-bottom: 20px; 
-  padding: 70px;
-  /* Adds space between the image and social icons */
 }
 
-.social-links {
-  display: flex;
-  gap: 15px; /* Space between icons */
+@media (max-width: 768px) {
+  .navbar {
+    padding: 0.5rem 1rem;
+  }
+
+  .navbar .logo {
+    font-size: 1.2rem;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .page1,
+  .page2 {
+    height: 30vh;
+  }
+
+  .contact-container {
+    padding: 20px;
+    gap: 15px;
+    width: 90%;
+  }
+
+  .contact-form h2 {
+    font-size: 1.25rem;
+  }
+
+  .contact-form button {
+    padding: 8px;
+  }
+
+  .owner-image img {
+    width: 80px;
+    height: 80px;
+  }
 }
 
-.social-icon {
-  font-size: 24px;
-  color: #333;
-  text-decoration: none;
-  transition: color 0.3s;
+@media (max-width: 480px) {
+  .navbar .logo {
+    font-size: 1rem;
+  }
+
+  .page1,
+  .page2 {
+    height: 25vh;
+  }
+
+  .contact-container {
+    padding: 15px;
+  }
+
+  .contact-form h2 {
+    font-size: 1rem;
+  }
+
+  .contact-form button {
+    padding: 6px;
+  }
 }
 
-.social-icon:hover {
-  color: #0077b5; /* Adjust hover color */
-}
-
-html {
-    scroll-behavior: smooth;
-}
 
                     </style>
 
